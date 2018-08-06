@@ -10,6 +10,7 @@
 seq -w 20|sed -r "s#(.*)#useradd udacity_vip\1 -m  #g"|bash
 tail -20 /etc/passwd
 echo udacity_vip{01..20}:$((RANDOM))|tr " " "\n" >pass.log
+chpawwd <pass.log
 ```
 
 //root 身份登录
